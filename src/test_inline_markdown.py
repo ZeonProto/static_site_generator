@@ -1,6 +1,6 @@
 import unittest
 from inline_markdown import (
-    text_to_textnode,
+    text_to_textnodes,
     split_nodes_delimiter,
     split_nodes_image,
     split_nodes_link,
@@ -172,7 +172,7 @@ class TestInlineMarkdown(unittest.TestCase):
         )
 
     def test_text_to_textnodes(self):
-        nodes = text_to_textnode(
+        nodes = text_to_textnodes(
             "This is **text** with an _italic_ word and a `code block` and an ![obi wan image](https://i.imgur.com/fJRm4Vk.jpeg) and a [link](https://boot.dev)"
         )
         self.assertListEqual(
